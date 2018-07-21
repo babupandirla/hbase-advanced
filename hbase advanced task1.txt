@@ -1,0 +1,59 @@
+1.Nosql Databases?
+
+	NoSQL is an approach to database design that can accomodate a wide variety of data models,
+	including key-value, document, columnar and graph formats. NoSQL, which stand for "not only SQL",
+	is an alternative to traditional relational databases in which data is placed in tables and data schema is carefully designed before the database is built.
+	NoSQL databases are especially useful for working with large sets of distributed data.
+
+2.Types of Nosql Databases?
+	
+	NoSQL databases typically fall into one of four categories:
+	1. Key-value stores : are the simplest. Every item in the database is stored as an attribute name (or "key") together with its value. Riak, Voldemort, and Redis are the most well-known in this category.
+	2.Wide-column stores : store data together as columns instead of rows and are optimized for queries over large datasets. The most popular are Cassandra and HBase.
+	3.Document databases : pair each key with a complex data structure known as a document. Documents can contain many different key-value pairs, or key-array pairs, or even nested documents. MongoDB is the most popular of these databases.
+	4. Graph databases : are used to store information about networks, such as social connections. Examples are Neo4J and HyperGraphDB.
+3.CAP thearom?
+	
+	The CAP Theorem states that, in a distributed system (a collection of interconnected nodes that share data.), 	
+	you can only have two out of the following three guarantees across a write/read pair:
+	Consistency, Availability, and Partition Tolerance - one of them must be sacrificed.
+	Consistency - A read is guaranteed to return the most recent write for a given client.
+	Availability - A non-failing node will return a reasonable response within a reasonable amount of time (no error or timeout).
+	Partition Tolerance - The system will continue to function when network partitions occur
+
+4.HBase Architecture?
+
+	HBase has three major components: the client library, a master server, and region servers. Region servers can be added or removed as per requirement.
+	MasterServer
+	The master server -
+	Assigns regions to the region servers and takes the help of Apache ZooKeeper for this task.
+	Handles load balancing of the regions across region servers. It unloads the busy servers and shifts the regions to less occupied servers.
+	Maintains the state of the cluster by negotiating the load balancing.
+	Is responsible for schema changes and other metadata operations such as creation of tables and column families.
+	Regions:
+	Regions are nothing but tables that are split up and spread across the region servers.
+	Region server:
+	The region servers have regions that -
+	Communicate with the client and handle data-related operations.
+	Handle read and write requests for all the regions under it.
+	Decide the size of the region by following the region size thresholds.
+	When we take a deeper look into the region server, it contain regions and stores as shown below:
+	Regional Server
+	The store contains memory store and HFiles. Memstore is just like a cache memory. Anything that is entered into the HBase is stored here initially.
+	Later, the data is transferred and saved in Hfiles as blocks and the memstore is flushed.
+	Zookeeper:
+	Zookeeper is an open-source project that provides services like maintaining configuration information, naming, providing distributed synchronization, etc.
+	Zookeeper has ephemeral nodes representing different region servers. Master servers use these nodes to discover available servers.
+	In addition to availability, the nodes are also used to track server failures or network partitions.
+	Clients communicate with region servers via zookeeper.
+	In pseudo and standalone modes, HBase itself will take care of zookeeper.
+
+1.HBase vs RDBMS?
+	1.HBase is coloumn oriented where as RDBMS is row oriented mostly.
+	2.flexible schema in Hbase but in RDBMS we have fixed schema.in Hbase we can add coloumns after
+	creation.
+	3.Hbase is Good with sparse tables but RDBMS is not optimized for sparse tables.
+	4.Hbase as tight interation with Mapreduce where RDBMS doesn't have integration.
+	5.Hbase can scalabel horizentally But RDBMS is hard to scale.
+	6.HBASE is supports semi-structured and non structured dataas well but RDBMS only supports Strutured data.
+ 
