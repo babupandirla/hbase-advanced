@@ -1,0 +1,142 @@
+[acadgild@localhost ~]$ ll
+total 312
+-rw-rw-r--.  1 acadgild acadgild 11712 Jun 25 20:19 allnonida.jar
+-rw-rw-r--.  1 acadgild acadgild 12215 Jun 26 00:29 assignment5.jar
+-rw-rw-r--.  1 acadgild acadgild 12213 Jun 26 01:25 assignment5o.jar
+-rw-rw-r--.  1 acadgild acadgild  4691 Jun 25 19:27 assignment.jar
+-rw-rw-r--.  1 acadgild acadgild   717 Jun 25 19:32 assmapreduce.txt
+-rw-rw-r--.  1 acadgild acadgild  4783 Jun 25 20:07 badrecords.jar
+drwxr-xr-x.  4 acadgild acadgild  4096 Jun 25 20:48 Desktop
+drwxr-xr-x.  2 acadgild acadgild  4096 Feb  2 12:52 Documents
+drwxr-xr-x.  2 acadgild acadgild  4096 Jun 25 20:47 Downloads
+drwxrwxr-x.  3 acadgild acadgild  4096 Dec 29 16:59 eclipse
+drwxrwxr-x.  6 acadgild acadgild  4096 Jun 25 17:53 eclipse-workspace
+-rw-rw-r--.  1 acadgild acadgild   261 Jun 26 09:02 employee_details.txt
+-rw-rw-r--.  1 acadgild acadgild    72 Jun 26 08:50 employee_expences.txt
+drwxrwxr-x.  2 acadgild acadgild  4096 Jun 26 02:13 hadoop
+drwxrwxr-x.  2 acadgild acadgild  4096 Jun 26 16:18 hbase
+drwxrwxr-x.  2 acadgild acadgild  4096 Jun 26 14:57 hivenew.txt
+-rw-rw-r--.  1 acadgild acadgild     4 Jun 26 14:40 hivenew.txty
+-rw-rw-r--.  1 acadgild acadgild   420 Jun 26 13:53 hivetemp.txt
+drwxrwxr-x. 13 acadgild acadgild  4096 Feb  9 18:06 install
+-rwxrwxrwx.  1 acadgild acadgild   127 Jun 16 11:17 max-temp.txt
+drwxr-xr-x.  2 acadgild acadgild  4096 Dec 27 17:03 Music
+-rw-rw-r--.  1 acadgild acadgild    71 Jun 26 00:44 musicdata.txt
+drwxr-xr-x.  2 acadgild acadgild  4096 Dec 27 17:03 Pictures
+-rw-rw-r--.  1 acadgild acadgild 23784 Jun 26 09:29 pig_1529979888191.log
+-rw-rw-r--.  1 acadgild acadgild  2643 Jun 26 09:32 pig_1529985684921.log
+-rw-rw-r--.  1 acadgild acadgild 16588 Jun 26 10:14 pig_1529985964694.log
+-rw-rw-r--.  1 acadgild acadgild  5501 Jun 26 10:17 pig_1529988268907.log
+-rw-rw-r--.  1 acadgild acadgild  5304 Jun 26 10:20 pig_1529988469977.log
+-rw-rw-r--.  1 acadgild acadgild  2631 Jun 26 10:50 pig_1529990388612.log
+-rw-rw-r--.  1 acadgild acadgild 14178 Jun 26 11:06 pig_1529990492911.log
+-rw-rw-r--.  1 acadgild acadgild 12054 Jun 26 11:16 pig_1529991371618.log
+-rw-rw-r--.  1 acadgild acadgild 20689 Jun 26 11:50 pig_1529992850839.log
+-rw-rw-r--.  1 acadgild acadgild  2614 Jun 26 11:59 pig_1529994557337.log
+-rw-rw-r--.  1 acadgild acadgild  2011 Jun 26 12:00 pig_1529994637330.log
+-rw-rw-r--.  1 acadgild acadgild  2032 Jun 26 12:01 pig_1529994684631.log
+-rw-rw-r--.  1 acadgild acadgild  2832 Jun 26 12:02 pig_1529994723330.log
+-rw-rw-r--.  1 acadgild acadgild  2836 Jun 26 12:03 pig_1529994810131.log
+-rw-rw-r--.  1 acadgild acadgild   579 Jun 26 12:57 pigtask2_2.pig
+-rw-rw-r--.  1 acadgild acadgild   674 Jun 26 12:37 pigtask2.pig
+drwxr-xr-x.  2 acadgild acadgild  4096 Dec 27 17:03 Public
+drwxr-xr-x.  2 acadgild acadgild  4096 Dec 27 17:03 Templates
+drwxr-xr-x.  2 acadgild acadgild  4096 Dec 27 17:03 Videos
+-rw-rw-r--.  1 acadgild acadgild   226 Jun 26 08:15 wcpig.pig
+-rw-rw-r--.  1 acadgild acadgild  5922 Jun 25 20:00 wordcount.jar
+-rw-rw-r--.  1 acadgild acadgild   328 Jun 16 11:04 word-count.txt
+-rw-rw-r--.  1 acadgild acadgild  3641 Jun 16 11:57 word.txt
+[acadgild@localhost ~]$ cd hbase
+[acadgild@localhost hbase]$ ll
+total 8
+-rw-rw-r--. 1 acadgild acadgild 4481 Jun 26 16:18 bulk_data.tsv
+
+
+1       Amit    4
+2       Girija  3
+3       jatin   5
+4       Swathi  3
+
+[acadgild@localhost ~]$ jps
+9648 JobHistoryServer
+8465 SecondaryNameNode
+8707 NodeManager
+8247 DataNode
+8151 NameNode
+15866 Jps
+8605 ResourceManager
+[acadgild@localhost ~]$ start-hbase.sh
+localhost: starting zookeeper, logging to /home/acadgild/install/hbase/hbase-1.2.6/logs/hbase-acadgild-zookeeper-localhost.localdomain.out
+starting master, logging to /home/acadgild/install/hbase/hbase-1.2.6/logs/hbase-acadgild-master-localhost.localdomain.out
+starting regionserver, logging to /home/acadgild/install/hbase/hbase-1.2.6/logs/hbase-acadgild-1-regionserver-localhost.localdomain.out
+You have new mail in /var/spool/mail/acadgild
+[acadgild@localhost ~]$ jps
+9648 JobHistoryServer
+16176 HMaster
+8465 SecondaryNameNode
+16290 HRegionServer
+8707 NodeManager
+16083 HQuorumPeer
+8247 DataNode
+8151 NameNode
+8605 ResourceManager
+16398 Jps
+[acadgild@localhost ~]$ hbase shell
+2018-06-26 15:58:07,881 WARN  [main] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/acadgild/install/hbase/hbase-1.2.6/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/acadgild/install/hadoop/hadoop-2.6.5/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+HBase Shell; enter 'help<RETURN>' for list of supported commands.
+Type "exit<RETURN>" to leave the HBase Shell
+Version 1.2.6, rUnknown, Mon May 29 02:25:32 CDT 2017
+
+hbase(main):001:0> create 'bulktable','cf1','cf2'
+
+ERROR: Connection refused
+
+Here is some help for this command:
+Creates a table. Pass a table name, and a set of column family
+specifications (at least one), and, optionally, table configuration.
+Column specification can be a simple string (name), or a dictionary
+(dictionaries are described below in main help output), necessarily 
+including NAME attribute. 
+Examples:
+
+Create a table with namespace=ns1 and table qualifier=t1
+  hbase> create 'ns1:t1', {NAME => 'f1', VERSIONS => 5}
+
+Create a table with namespace=default and table qualifier=t1
+  hbase> create 't1', {NAME => 'f1'}, {NAME => 'f2'}, {NAME => 'f3'}
+  hbase> # The above in shorthand would be the following:
+  hbase> create 't1', 'f1', 'f2', 'f3'
+  hbase> create 't1', {NAME => 'f1', VERSIONS => 1, TTL => 2592000, BLOCKCACHE => true}
+  hbase> create 't1', {NAME => 'f1', CONFIGURATION => {'hbase.hstore.blockingStoreFiles' => '10'}}
+  
+Table configuration options can be put at the end.
+Examples:
+
+  hbase> create 'ns1:t1', 'f1', SPLITS => ['10', '20', '30', '40']
+  hbase> create 't1', 'f1', SPLITS => ['10', '20', '30', '40']
+  hbase> create 't1', 'f1', SPLITS_FILE => 'splits.txt', OWNER => 'johndoe'
+  hbase> create 't1', {NAME => 'f1', VERSIONS => 5}, METADATA => { 'mykey' => 'myvalue' }
+  hbase> # Optionally pre-split the table into NUMREGIONS, using
+  hbase> # SPLITALGO ("HexStringSplit", "UniformSplit" or classname)
+  hbase> create 't1', 'f1', {NUMREGIONS => 15, SPLITALGO => 'HexStringSplit'}
+  hbase> create 't1', 'f1', {NUMREGIONS => 15, SPLITALGO => 'HexStringSplit', REGION_REPLICATION => 2, CONFIGURATION => {'hbase.hregion.scan.loadColumnFamiliesOnDemand' => 'true'}}
+  hbase> create 't1', {NAME => 'f1', DFS_REPLICATION => 1}
+
+You can also keep around a reference to the created table:
+
+  hbase> t1 = create 't1', 'f1'
+
+Which gives you a reference to the table named 't1', on which you can then
+call methods.
+
+
+hbase(main):002:0>hbase.org.apache.hadoop.hbase.mapreduce.importTsv-Dimporttsv.coloumns=HBASE_ROW_KEY,cf1:name,cf2:exp
+bulktable /hadoopdata1/hbase/bulk_data.tsv
+
+
+
